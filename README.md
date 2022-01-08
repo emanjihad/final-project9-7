@@ -5,7 +5,7 @@
 ### The POST EMAN is an iOS application that organizes the post you can make or show it.
 
 
-####Application Features.
+#### Application Features.
 1-It is simple iOS Application built by swift,which displays,addnew post ,and comment,browes post ,creat user and update your profile .
 2- I USE MVC (DESIGN PATEERN)
 3- NETWORKING
@@ -29,7 +29,7 @@ API
     
                 
     
-###### Demo
+### Demo
 <img src = "https://user-images.githubsercontent.com/Users/emanjihad/Desktop/Screen Shot 2022-01-07 at 9.44.44 PM.png" height = "500"><img src = "https://user-images.githubsercontent.com/Users/emanjihad/Desktop/Screen Shot 2022-01-07 at 9.44.11 PM.png "height = "500"><img src = "https://user-images.githubsercontent.com/Users/emanjihad/Desktop/Screen Shot 2022-01-07 at 9.42.00 PM.png" height = "500"><img src = "https://user-images.githubsercontent/Users/emanjihad/Desktop/Screen Shot 2022-01-07 at 10.13.43 PM.png height = "500">
 ---
 
