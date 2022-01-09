@@ -140,7 +140,6 @@ class UserAPI: API {
     }
     
     static func updateUserInfo(userid: String, firstName: String,lastName: String, phone: String ,imageUrl: String ,completionHandeler: @escaping (User?, String?) ->()){
-       
         let url = urls + "/user/\(userid)"
         let params = ["firstName": firstName ,"lastName": lastName, "phone": phone, "picture": imageUrl]
         //QUEREY PARAM
@@ -149,21 +148,13 @@ class UserAPI: API {
             respons in
                 switch respons.result{
                 case .success:
-                    
                     let jsonData = JSON(respons.value)
-                   
                     print(jsonData)
                 let  decoder = JSONDecoder()
                
                 do {
                     let user =  try decoder.decode(User.self, from: jsonData.rawData())
-                    
-                   
                         completionHandeler(user, nil)
-                    
-                    
-               
-                 
                 }catch let error{
                     print(error)
                 }
@@ -178,11 +169,7 @@ class UserAPI: API {
                    
                     let errorMessage = emailerror + " " + firstNameErorr + " " + lastNmaeErorr
                     
-                    
-                    
                     completionHandeler(nil, errorMessage)
-                   
-            
                     
                 }
                 
