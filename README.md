@@ -30,7 +30,8 @@ API
                 
     
 ### Demo
-<img src="https://user-images.githubusercontent.com/81803221/148680808-68bcffc9-9c5f-4e36-9cfd-4e63dec024bb.png" height="500">
+<img src="https://user-images.githubusercontent.com/81803221/148680808-68bcffc9-9c5f-4e36-9cfd-4e63dec024bb.png" height="500"><img src="https://user-images.githubusercontent.com/81803221/148681300-152d2873-08fc-4ebd-a553-72003e571769.png" height="500">
+
 
 ---
 
