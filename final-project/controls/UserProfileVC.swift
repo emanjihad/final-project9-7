@@ -60,10 +60,7 @@ class UserProfileVC: UIViewController {
             }
        
     }
-    //ACTION
-    @IBAction func updateProfileButton(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "EditUserVC") as! EditUserVC
-        present(vc, animated: true, completion: nil)
-    }
+   
+   
     
 }

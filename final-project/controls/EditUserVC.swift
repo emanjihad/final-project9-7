@@ -9,6 +9,9 @@ import UIKit
 import NVActivityIndicatorView
 class EditUserVC: UIViewController {
     //OUTLET
+    
+    
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var loaderview: NVActivityIndicatorView!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,6 +27,7 @@ class EditUserVC: UIViewController {
         nameTextField.isEnabled = true
         phoneTextField.isEnabled = true
         imageTextField.isEnabled = true
+        profileImageView.image =
         setup()
         // Do any additional setup after loading the view.
     }
@@ -52,7 +56,7 @@ class EditUserVC: UIViewController {
         loaderview.startAnimating()
         UserAPI.updateUserInfo(userid: loggedin.id , firstName: nameTextField.text!, lastName: lastNameTextField.text!, phone: phoneTextField.text!, imageUrl: imageTextField.text!) { user, massage in
             self.loaderview.stopAnimating()
-           
+            
             if let responses = user {
                
                 if let image = user?.picture {
@@ -61,13 +65,30 @@ class EditUserVC: UIViewController {
                 self.nameLabel.text = responses.firstName + "" + responses.lastName
                 self.lastNameTextField.text = responses.lastName
                 self.phoneTextField.text = responses.phone
-                //self.dismiss(animated: true)
+               
                 
-                
+            
             }
             
         }
         
     }
     
+    
+    @IBAction func changeImageProfile(_ sender: Any) {
+        let imagepicker = UIImagePickerController()
+        imagepicker.delegate = self
+        imagepicker.allowsEditing = true
+        present(imagepicker, animated: true, completion: nil)
+    }
 }
+extension EditUserVC: UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+        dismiss(animated: true, completion: nil)
+        profileImageView.image = image
+        
+    }
+    }
+
+
