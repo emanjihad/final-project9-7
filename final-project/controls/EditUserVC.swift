@@ -27,7 +27,7 @@ class EditUserVC: UIViewController {
         nameTextField.isEnabled = true
         phoneTextField.isEnabled = true
         imageTextField.isEnabled = true
-        profileImageView.image =
+        
         setup()
         // Do any additional setup after loading the view.
     }
